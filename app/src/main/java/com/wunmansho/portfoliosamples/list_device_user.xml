@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".presenter.ListDeviceUser">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/ab01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:visibility="visible">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorToolbarBlue"
+            app:layout_collapseMode="pin"
+            app:navigationIcon="@drawable/defense_round_48dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitle="@string/sdu"
+            app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:subtitleTextColor="@color/common_google_signin_btn_text_dark_default"
+            app:title="@string/app_name">
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ab02"
+        android:layout_below="@+id/ab01"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:divider="@drawable/divider" />
+
+    </FrameLayout>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/ab02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fitsSystemWindows="false"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:visibility="visible">
+
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@color/colorToolbarBlue"
+            android:fitsSystemWindows="true"
+            android:weightSum="1"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:id="@+id/llAb02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorToolbarBlue"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llbtnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".25"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/btnAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_margin="10dp"
+                        android:background="@color/colorToolbarBlue"
+                        android:contentDescription="@string/todo"
+                        android:visibility="visible"
+                        app:backgroundTint="@color/colorToolbarBlue"
+                        app:srcCompat="@drawable/ic_add_outline_white_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llbtnLightning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".25"
+                    android:background="@color/colorToolbarBlue"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/btnLightning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_margin="10dp"
+                        android:contentDescription="@string/todo"
+                        android:visibility="visible"
+                        app:backgroundTint="@color/colorToolbarBlue"
+                        app:srcCompat="@drawable/lightning_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llbtnCopy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".25"
+                    android:background="@color/colorToolbarBlue"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/btnCopy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_margin="10dp"
+                        android:contentDescription="@string/todo"
+                        android:visibility="gone"
+                        app:backgroundTint="@color/colorToolbarBlue"
+                        app:srcCompat="@drawable/ic_content_copy_white_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llbtnHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".25"
+                    android:background="@color/colorToolbarBlue"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/btnHelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_margin="10dp"
+                        android:contentDescription="@string/todo"
+                        android:visibility="visible"
+                        app:backgroundTint="@color/colorToolbarBlue"
+                        app:srcCompat="@drawable/ic_help_outline_white_24dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+</RelativeLayout>

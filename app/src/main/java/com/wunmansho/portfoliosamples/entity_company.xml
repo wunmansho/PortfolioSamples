@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+
+                android:layout_weight=".4"
+                android:elevation="0dp"
+                android:gravity="top"
+                android:labelFor="@+id/tieXX_CNAM01"
+                android:text="@string/tv0014"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvXX_AID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".6"
+
+                android:elevation="0dp"
+                android:gravity="top"
+                android:labelFor="@+id/tieXX_PNUM01"
+                android:text="@string/tv0015"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/tieXX_CNAM01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+
+                android:layout_weight=".4"
+                android:inputType="textCapWords"
+                android:paddingTop="0dp"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/tieXX_PNUM01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight=".6"
+                android:inputType="textCapWords"
+                android:paddingTop="0dp"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv0016"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/tv0017"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unique_id"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/tv0014"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unique_id"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/tv0014"
+            android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/llcompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+
+                android:elevation="0dp"
+                android:gravity="top"
+                android:labelFor="@+id/tieXX_COMP"
+                android:text="@string/tv0018"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/black"
+
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/bullHornCompOff"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/todo"
+                android:soundEffectsEnabled="false"
+                android:tint="@color/colorToolbarBlue"
+                app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp" />
+
+            <ImageButton
+                android:id="@+id/bullHornCompOn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/todo"
+                android:soundEffectsEnabled="false"
+                android:tint="@color/colorToolbarBlue"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/tieXX_COMP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:inputType="none|textCapWords"
+            android:paddingTop="0dp"
+            android:textAlignment="viewStart"
+
+            android:textSize="12sp" />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvXX_CUID"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvXX_CDATE"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvXX_UUID"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvXX_UDATE"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</RelativeLayout>

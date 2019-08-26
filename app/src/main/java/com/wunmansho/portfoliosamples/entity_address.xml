@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/entity_address_ll01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvXX_ADDRESS1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:elevation="0dp"
+                android:gravity="top"
+                android:labelFor="@+id/tieXX_ADDR1"
+                android:text="@string/tv0004"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/bullHornAddr1Off"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="false"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/todo"
+                android:soundEffectsEnabled="false"
+                android:tint="@color/colorToolbarBlue"
+                app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp" />
+
+            <ImageButton
+                android:id="@+id/bullHornAddr1On"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_alignEnd="@+id/tvXX_ADDRESS1"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/todo"
+                android:soundEffectsEnabled="false"
+                android:tint="@color/colorToolbarBlue"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/tieXX_ADDR1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords|textPostalAddress"
+            android:paddingTop="0dp"
+            android:textAlignment="viewStart"
+            android:textSize="12sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvXX_ADDRESS2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:elevation="0dp"
+                android:gravity="top"
+                android:labelFor="@+id/tieXX_ADDR2"
+                android:text="@string/tv0005"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/bullHornAddr2Off"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_alignEnd="@+id/tvXX_ADDRESS2"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/todo"
+                android:tint="@color/colorToolbarBlue"
+                app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp" />
+
+            <ImageButton
+                android:id="@+id/bullHornAddr2On"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_alignEnd="@+id/tvXX_ADDRESS2"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/todo"
+                android:tint="@color/colorToolbarBlue"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/tieXX_ADDR2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:inputType="textCapWords|textPostalAddress"
+            android:paddingTop="0dp"
+            android:textAlignment="viewStart"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/entity_address_ll02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entity_address_ll01"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tvXX_CITY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight=".8"
+            android:elevation="0dp"
+            android:gravity="top"
+            android:labelFor="@+id/tieXX_CITY"
+            android:text="@string/tv0006"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/bullHornCityOff"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            android:tint="@color/colorToolbarBlue"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp" />
+
+        <ImageButton
+            android:id="@+id/bullHornCityOn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            android:tint="@color/colorToolbarBlue"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/entity_address_ll03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entity_address_ll02"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tieXX_CITY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight=".4"
+
+            android:inputType="textCapWords"
+            android:paddingTop="0dp"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/entity_address_ll04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entity_address_ll03"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvXX_STATE"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+
+            android:layout_weight=".8"
+            android:elevation="0dp"
+            android:gravity="top"
+            android:labelFor="@+id/tieXX_ST"
+            android:text="@string/tv0007"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/bullHornStateOff"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            android:tint="@color/colorToolbarBlue"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp" />
+
+        <ImageButton
+            android:id="@+id/bullHornStateOn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            android:tint="@color/colorToolbarBlue"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp" />
+
+
+        <TextView
+            android:id="@+id/tvXX_ZIP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+
+            android:elevation="0dp"
+            android:gravity="top"
+            android:labelFor="@+id/tieXX_ZIP"
+            android:text="@string/accident_zip"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/bullHornZipOff"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            android:tint="@color/colorToolbarBlue"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp" />
+
+        <ImageButton
+            android:id="@+id/bullHornZipOn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/todo"
+            android:tint="@color/colorToolbarBlue"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/entity_address_ll05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entity_address_ll04"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/tieXX_ST"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight=".8"
+            android:inputType="textCapWords"
+            android:paddingTop="0dp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/tieXX_ZIP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight=".2"
+            android:inputType="textCapWords"
+            android:paddingTop="0dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entity_address_ll05"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvXX_COUNTRY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:labelFor="@+id/ccp_resident_country"
+            android:text="@string/address_country"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp_resident_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_showFullName="true"
+            app:ccp_showNameCode="true"
+            app:ccp_showPhoneCode="false"
+            app:ccp_textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

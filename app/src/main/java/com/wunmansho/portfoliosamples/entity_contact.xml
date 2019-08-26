@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv0009"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/bullHornEmailOff"
+            android:elevation="0dp"
+            android:gravity="top"
+            android:labelFor="@+id/tieXX_EMAIL"
+            android:text="@string/tv0009"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/bullHornEmailOff"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_alignEnd="@+id/tieXX_EMAIL"
+
+            android:layout_alignTop="@+id/tv0009"
+
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/white"
+            android:soundEffectsEnabled="false"
+            android:tint="@color/colorToolbarBlue"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp"
+            android:contentDescription="@string/todo" />
+
+        <ImageButton
+            android:id="@+id/bullHornEmailOn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_alignEnd="@+id/tieXX_EMAIL"
+
+            android:layout_alignTop="@+id/tv0009"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/white"
+            android:soundEffectsEnabled="false"
+            android:tint="@color/colorToolbarBlue"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp"
+            android:contentDescription="@string/todo" />
+
+
+        <EditText
+            android:id="@+id/tieXX_EMAIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv0009"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:paddingTop="0dp"
+            android:textAlignment="viewStart"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp_phon1_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rlEmail"
+        android:layout_marginTop="10dp"
+        app:ccpDialog_showNameCode="true"
+        app:ccpDialog_showPhoneCode="true"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_autoDetectLanguage="true"
+        app:ccp_autoFormatNumber="true"
+        app:ccp_textSize="12sp" />
+
+    <EditText
+        android:id="@+id/tieXX_PHON1"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tieXX_PHON2"
+        android:layout_below="@+id/rlEmail"
+        android:inputType="phone"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv0010"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ccp_phon1_country"
+        android:layout_alignBottom="@+id/tieXX_PHON1"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/tieXX_PHON1"
+        android:elevation="0dp"
+        android:labelFor="@+id/tieXX_PHON1"
+        android:text="@string/tv0010"
+        android:textAlignment="gravity"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <ImageButton
+        android:id="@+id/bullHornPhon1Off"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:layout_alignBottom="@+id/tv0010"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/white"
+        android:soundEffectsEnabled="false"
+        android:tint="@color/colorToolbarBlue"
+        app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/bullHornPhon1On"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:layout_alignBottom="@+id/tv0010"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/white"
+        android:soundEffectsEnabled="false"
+        android:tint="@color/colorToolbarBlue"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp"
+        android:contentDescription="@string/todo" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp_phon2_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccp_phon1_country"
+        android:layout_marginTop="10dp"
+        app:ccpDialog_showNameCode="true"
+        app:ccpDialog_showPhoneCode="true"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_autoDetectLanguage="true"
+        app:ccp_autoFormatNumber="true"
+        app:ccp_textSize="12sp" />
+
+    <EditText
+        android:id="@+id/tieXX_PHON2"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ccp_phon2_country"
+        android:layout_below="@+id/tieXX_PHON1"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/ccp_phon2_country"
+        android:inputType="phone"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv0011"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tieXX_PHON2"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/tieXX_PHON2"
+        android:elevation="0dp"
+        android:labelFor="@+id/tieXX_PHON2"
+        android:text="@string/tv0011"
+        android:textAlignment="gravity"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <ImageButton
+        android:id="@+id/bullHornPhon2Off"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:layout_alignBottom="@+id/tv0011"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/white"
+        android:soundEffectsEnabled="false"
+        android:tint="@color/colorToolbarBlue"
+        app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/bullHornPhon2On"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:layout_alignBottom="@+id/tv0011"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/white"
+        android:soundEffectsEnabled="false"
+        android:tint="@color/colorToolbarBlue"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp"
+        android:contentDescription="@string/todo" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp_phon3_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccp_phon2_country"
+        android:layout_marginTop="10dp"
+        app:ccpDialog_showNameCode="true"
+        app:ccpDialog_showPhoneCode="true"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_autoDetectLanguage="true"
+        app:ccp_autoFormatNumber="true"
+        app:ccp_textSize="12sp" />
+
+    <EditText
+        android:id="@+id/tieXX_PHON3"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ccp_phon3_country"
+        android:layout_alignStart="@+id/tieXX_PHON2"
+        android:layout_below="@+id/tieXX_PHON2"
+        android:inputType="none|phone"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv0012"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tieXX_PHON3"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/tieXX_PHON3"
+        android:elevation="0dp"
+        android:labelFor="@+id/tieXX_PHON3"
+        android:text="@string/tv0012"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <ImageButton
+        android:id="@+id/bullHornPhon3Off"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:layout_alignBottom="@+id/tv0012"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/white"
+        android:soundEffectsEnabled="false"
+        android:tint="@color/colorToolbarBlue"
+        app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/bullHornPhon3On"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+
+        android:layout_alignBottom="@+id/tv0012"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/white"
+        android:soundEffectsEnabled="false"
+        android:tint="@color/colorToolbarBlue"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp"
+        android:contentDescription="@string/todo" />
+
+
+
+</RelativeLayout>

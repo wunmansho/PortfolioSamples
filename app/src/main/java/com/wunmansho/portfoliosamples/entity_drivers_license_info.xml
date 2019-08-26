@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/entity_drivers_license_info_ll01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight=".45"
+            android:elevation="0dp"
+            android:gravity="top"
+            android:labelFor="@+id/tieXX_LICENSE"
+            android:text="@string/tv0019"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/bullHornLicOff"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+
+            android:layout_weight=".07"
+            android:backgroundTint="@color/white"
+            android:soundEffectsEnabled="false"
+            android:tint="@color/colorToolbarBlue"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp" android:contentDescription="@string/todo"/>
+
+        <ImageButton
+            android:id="@+id/bullHornLicOn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+            android:layout_weight=".07"
+            android:backgroundTint="@color/white"
+            android:soundEffectsEnabled="false"
+            android:tint="@color/colorToolbarBlue"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp" android:contentDescription="@string/todo"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight=".5"
+            android:text="@string/license_country"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/entity_drivers_license_info_ll02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entity_drivers_license_info_ll01"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/tieXX_LICENSE"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight=".5"
+            android:inputType="text"
+            android:paddingTop="0dp"
+            android:textAlignment="viewStart"
+            android:textSize="12sp" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp_license_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_showNameCode="true"
+            app:ccp_showPhoneCode="false"
+            app:ccp_textSize="12sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/entity_drivers_license_info_ll03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entity_drivers_license_info_ll02"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/entity_button_wrapper"
+            android:elevation="0dp"
+            android:gravity="top"
+            android:labelFor="@+id/tieXX_LST"
+            android:text="@string/tv0020"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/entity_button_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/bullHornLicStOff"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_marginEnd="5dp"
+                android:layout_weight=".07"
+                android:backgroundTint="@color/white"
+                android:soundEffectsEnabled="false"
+                android:tint="@color/colorToolbarBlue"
+                app:srcCompat="@drawable/ic_bullhorn_black_r_off24dp" android:contentDescription="@string/todo"/>
+
+            <ImageButton
+                android:id="@+id/bullHornLicStOn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:layout_marginEnd="5dp"
+                android:layout_weight=".07"
+                android:backgroundTint="@color/white"
+                android:soundEffectsEnabled="false"
+                android:tint="@color/colorToolbarBlue"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_bullhorn_black_r_on24dp" android:contentDescription="@string/todo"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entity_drivers_license_info_ll03"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tieXX_LST"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:inputType="text|textCapCharacters"
+            android:paddingTop="0dp"
+            android:textAlignment="viewStart"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

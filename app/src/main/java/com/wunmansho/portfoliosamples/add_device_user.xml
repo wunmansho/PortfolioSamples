@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:orientation="vertical"
+    android:theme="@style/Animation.AppCompat.Dialog"
+    tools:ignore="MergeRootFrame">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/ab01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorToolbarBlue"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorToolbarBlue"
+            app:layout_collapseMode="pin"
+            app:navigationIcon="@drawable/defense_round_48dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitle="@string/adu"
+            app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:subtitleTextColor="@color/common_google_signin_btn_text_dark_default"
+            app:title="@string/app_name">
+
+            <LinearLayout
+                android:id="@+id/llbtnSpeakOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@color/colorToolbarBlue"
+                android:gravity="end"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/btnSpeakOff"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/description_info"
+                    android:src="@drawable/ic_mic_off_white_24dp"
+                    app:backgroundTint="@color/colorToolbarBlue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llbtnSpeakOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorToolbarBlue"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/btnSpeakOn"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/description_info"
+                    android:src="@drawable/ic_mic_white_24dp"
+                    app:backgroundTint="@color/colorToolbarBlue" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvDA_PROMPT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvDA_PROMPT"
+                android:elevation="0dp"
+                android:maxHeight="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:id="@+id/rlwrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ab01">
+
+    <LinearLayout
+        android:id="@+id/involvement_type_ll00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/entity_involvement" />
+    </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/involvement_type_ll00"
+            android:background="@color/colorToolbarBlue"
+            android:visibility="gone">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                app:backgroundTint="@color/colorToolbarBlue"
+                android:src="@drawable/user_name_white_24dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                app:backgroundTint="@color/colorToolbarBlue"
+                android:src="@drawable/address_white_24dp" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                app:backgroundTint="@color/colorToolbarBlue"
+                android:src="@drawable/email_white_24dp" />
+
+        </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/add_device_user_ll01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabBar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/entity_name" />
+
+        <include layout="@layout/entity_drivers_license_info" />
+        <include layout="@layout/entity_company" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_device_user_ll02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabBar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/entity_address" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_device_user_ll03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabBar"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/entity_contact" />
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/ab02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/rlwrapper"
+        android:layout_marginTop="10dp"
+        android:fitsSystemWindows="false"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/colorToolbarBlue"
+            android:weightSum="1"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:id="@+id/rl01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorToolbarBlue"
+                android:visibility="visible">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/btnAdd"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/description_info"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/colorToolbarBlue"
+                    android:src="@drawable/ic_action_done" />
+
+                <LinearLayout
+                    android:id="@+id/llbtnHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="end"
+                    android:background="@color/colorToolbarBlue"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/btnHelp"
+                        style="@android:style/Widget.Material.Light.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        app:backgroundTint="@color/colorToolbarBlue"
+                        android:contentDescription="@string/description_info"
+                        android:src="@drawable/ic_help_outline_white_24dp"
+                       />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+</RelativeLayout>
